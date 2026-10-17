@@ -1,0 +1,7 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import {areas,services} from '../../data';
+export function getStaticPaths(){return areas.map(area=>({params:{slug:area.toLowerCase().replaceAll(' ','-')},props:{area}}))}
+const {area}=Astro.props;
+---
+<Layout title={`Cleaning services in ${area} | Linis Co PH`} description={`Home, office, deep, steam and post-event cleaning in ${area}. Contact Linis Co to confirm coverage and request a quote.`}><section class="wrap detail-hero"><a href="/#areas" class="text-link">← Service areas</a><div class="eyebrow">LOCAL CARE, THOUGHTFULLY DONE</div><h1>A fresh start<br/>in <span class="serif">{area}.</span></h1><p>Professional cleaning for homes and workspaces in {area}. Send your barangay, building or subdivision details so the team can confirm coverage, travel arrangements and availability for your address.</p><a class="button" href="/#quote">Ask about cleaning in {area} ↗</a></section><section class="wrap detail-content"><div><h2>Find your kind of clean.</h2><ul>{services.map(s=><li><a href={`/services/${s.slug}`}>{s.name} →</a></li>)}</ul></div><aside><h3>Make your visit easy</h3><p>Let us know about parking, building entry, elevator access and condominium or subdivision permits. Confirm any travel costs in your written quote before booking.</p><h3>Scheduling</h3><p>Share your preferred date and time. Appointments depend on availability and confirmation through Messenger or phone.</p></aside></section></Layout>

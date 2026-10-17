@@ -1,0 +1,7 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import {services,photo} from '../../data';
+export function getStaticPaths(){return services.map(service=>({params:{slug:service.slug},props:{service}}))}
+const {service}=Astro.props;
+---
+<Layout title={`${service.name} | Linis Co PH`} description={service.description}><section class="wrap detail-hero"><a class="text-link" href="/#services">← All services</a><div class="detail-grid"><div><div class="eyebrow">LINIS CO CLEANING SERVICES</div><h1>{service.name}</h1><p>{service.description}</p><a class="button" href="/#quote">Request a personalized quote ↗</a></div><img src={photo(service.image)} alt={`Illustrative space for ${service.name}`} /></div></section><section class="wrap detail-content"><div><h2>A plan for <span class="serif">your space.</span></h2><p>Typical tasks to discuss with the team. Final inclusions, equipment and exclusions are confirmed in your quotation.</p><ul>{service.items.map(item=><li>✓ {item}</li>)}</ul></div><aside><h3>Before your clean</h3><p>Share your location, approximate space size, preferred date, and delicate materials or specific concerns.</p><h3>Clear pricing</h3><p>Quotes depend on size, condition, access, travel and the agreed scope. No booking or payment is taken on this website.</p><a class="text-link" href="https://m.me/liniscoph/">Discuss your clean on Messenger ↗</a></aside></section></Layout>

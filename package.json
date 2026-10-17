@@ -1,0 +1,23 @@
+{
+  "name": "linis-co",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --host 0.0.0.0",
+    "build": "astro build",
+    "preview": "astro preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "@astrojs/react": "^7.1.0",
+    "@tailwindcss/vite": "^4.0.0",
+    "astro": "^7.4.0",
+    "gsap": "^3.12.0",
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=22.22.0"
+  }
+}
