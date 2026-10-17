@@ -8,8 +8,9 @@ export const services = [
 services.push(
 {slug:'move-in-move-out-cleaning',name:'Move-in / move-out cleaning',tag:'A fresh start for your next chapter',description:'Prepare a space for a new beginning or leave it ready for the next occupant. Discuss the handover requirements and accessible areas with our team.',items:['Room-by-room cleaning of accessible areas','Kitchen and bathroom refresh','Accessible cupboards and storage, as agreed','Handover priorities confirmed in your quote'],image:'photo-1600585154340-be6161a56a0c'},
 {slug:'carpet-upholstery-cleaning',name:'Carpet & upholstery cleaning',tag:'Care for the comforts you love',description:'Give carpets, sofas and upholstered furniture considered care. The team confirms fabric suitability, condition and the appropriate cleaning approach before work begins.',items:['Carpet and upholstery condition assessment','Material-compatible cleaning approach','Targeted attention to agreed problem areas','Drying and aftercare guidance'],image:'photo-1555041469-a586c61ea9bc'},
-{slug:'window-cleaning',name:'Window cleaning',tag:'Let a little more light in',description:'Refresh accessible windows and bring a clearer view to your space. Share window sizes, locations and access details so we can confirm a safe, practical scope.',items:['Accessible glass cleaning','Frames and sills, as agreed','Assessment of access and window condition','Scope and access restrictions confirmed in advance'],image:'photo-1484154218962-a197022b5858'}
+{slug:'window-cleaning',name:'Window cleaning',tag:'Let a little more light in',description:'Refresh accessible windows and bring a clearer view to your space. Share window sizes, locations and access details so we can confirm a safe, practical scope.',items:['Accessible glass cleaning','Frames and sills, as agreed','Assessment of access and window condition','Scope and access restrictions confirmed in advance'],image:'photo-1581578731548-c64695cc6952'}
 );
 export const areas=['Pasig','Manila','Las Piñas','Alabang','Cavite','Laguna','Batangas'];
 export const photo=(id,w=1200)=>`https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=85`;
+
 
