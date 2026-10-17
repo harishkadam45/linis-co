@@ -127,3 +127,12 @@ footer { display: flex; align-items: center; justify-content: space-between; gap
 footer > .footer-top .brand { font-size: 28px; }
 @media (max-width: 1100px) { footer { flex-wrap: wrap; justify-content: flex-start; gap: 24px 32px; } }
 @media (max-width: 760px) { footer { align-items: flex-start; } .footer-top > p { font-size: 14px; } }
+/* Keep navigation available while scrolling on every page. */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 70;
+  box-shadow: 0 2px 12px #0b0e1408;
+}
+html { scroll-padding-top: 114px; }
+@media (max-width: 760px) { html { scroll-padding-top: 94px; } }
