@@ -136,3 +136,41 @@ header {
 }
 html { scroll-padding-top: 114px; }
 @media (max-width: 760px) { html { scroll-padding-top: 94px; } }
+/* Compact footer composition for phones and tablets. */
+@media (max-width: 1100px) {
+  footer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    padding: 32px 24px 28px;
+  }
+  .footer-top {
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
+    column-gap: 28px;
+    row-gap: 28px;
+    align-items: center;
+    padding-bottom: 0;
+  }
+  footer > .footer-top .brand { font-size: 25px; }
+  .footer-top .brand-mark { font-size: 31px; }
+  .footer-top > p { font-size: 13px; line-height: 1.6; }
+  .footer-top > div { grid-column: 1 / -1; width: auto; }
+  .footer-top > div a { font-size: 11px; margin: 0 0 12px; }
+  .footer-top > div a:last-child { margin-bottom: 0; }
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    border-top: 0;
+    padding-top: 0;
+  }
+  .footer-credit { gap: 10px; font-size: 10px; line-height: 1.6; }
+  .footer-legal { gap: 14px; font-size: 10px; }
+}
+@media (max-width: 340px) {
+  .footer-top { column-gap: 18px; }
+  footer > .footer-top .brand { font-size: 23px; }
+  .footer-top > p { font-size: 12px; }
+}
